@@ -59,7 +59,7 @@ services:
 
 6. В Homebridge установить плагин `Homebridge Mqttthing`. Не настраивайте плагин через интерфейс, он не поддерживает все функции.
 
-7. На странице `JSON Config` добавить два устройства в массив `accessories`. Устройство с типом `"airPurifier"` — это бризер. Устройство `"temperatureSensor"` — встроенный датчик температуры. Заменить `<YOUR_BREATHER_ID>` на `Client ID` из 5 шага.
+7. На странице `JSON Config` добавить два устройства из конфига в массив `accessories`. Устройство с типом `"airPurifier"` — это бризер. Устройство `"temperatureSensor"` — встроенный датчик температуры. Заменить `<YOUR_BREATHER_ID>` на `Client ID` из 5 шага.
 
 8. Положить кодек `ballu-asp-100.js` в папку, где развёрнут Homebridge. Если используете докер — это папка `./homebridge`.
 
