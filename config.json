@@ -1,0 +1,49 @@
+{
+    "accessories": [
+        {
+            "accessory": "mqttthing",
+            "type": "airPurifier",
+            "name": "Oneair ASP-100",
+            "manufacturer": "Ballu",
+            "model": "ASP-100",
+            "url": "mqtt://192.168.1.1:1883",
+            "username": "rusclimate",
+            "password": "87fcf5e2e441",
+            "integerValue": true,
+            "codec": "ballu-asp-100.js",
+            "currentAirPurifierStateValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "topics": {
+                "setActive": "rusclimate/69/<YOUR_BREATHER_ID>/control/mode",
+                "getActive": "rusclimate/69/<YOUR_BREATHER_ID>/state/mode",
+                "getCurrentAirPurifierState": "rusclimate/69/<YOUR_BREATHER_ID>/state/mode",
+                "setRotationSpeed": "rusclimate/69/<YOUR_BREATHER_ID>/control/speed",
+                "getRotationSpeed": "rusclimate/69/<YOUR_BREATHER_ID>/state/speed",
+                "getFilterLifeLevel": "rusclimate/69/<YOUR_BREATHER_ID>/state/expendables$[0]",
+                "getFilterChangeIndication": {
+                    "topic": "rusclimate/69/<YOUR_BREATHER_ID>/state/expendables",
+                    "apply": "return message === '0';"
+                },
+                "setResetFilterIndication": {
+                    "topic": "rusclimate/69/<YOUR_BREATHER_ID>/control/expendables",
+                    "apply": "[0]"
+                }
+            }
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "temperatureSensor",
+            "name": "Ballu Temperature Sensor",
+            "url": "mqtt://localhost:1883",
+            "username": "rusclimate",
+            "password": "87fcf5e2e441",
+            "topics": {
+                "getCurrentTemperature": "rusclimate/69/<YOUR_BREATHER_ID>/state/sensor/temperature"
+            },
+            "history": "true"
+        }
+    ]
+}
