@@ -37,7 +37,7 @@
             "accessory": "mqttthing",
             "type": "temperatureSensor",
             "name": "Ballu Temperature Sensor",
-            "url": "mqtt://localhost:1883",
+            "url": "mqtt://192.168.1.1:1883",
             "username": "rusclimate",
             "password": "87fcf5e2e441",
             "topics": {
